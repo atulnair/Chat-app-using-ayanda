@@ -34,10 +34,10 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
     ArrayList<ChatMessage> chatMessages;
     Adapter adapter;
     private Ayanda a;
-
     EditText editView;
     Button sendButton;
     BluetoothDevice device;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,8 +89,8 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
             }
 
             @Override
-            public void connected(BluetoothDevice device) {
-
+            public void connected(BluetoothDevice devic) {
+                device = devic;
             }
 
 

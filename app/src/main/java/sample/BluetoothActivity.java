@@ -33,9 +33,6 @@ import sintulabs.p2p.Ayanda;
 import sintulabs.p2p.Bluetooth;
 import sintulabs.p2p.IBluetooth;
 
-/**
- * Created by sabzo on 1/14/18.
- */
 
 public class BluetoothActivity extends AppCompatActivity {
     private Button btnAnnounce;
@@ -169,6 +166,7 @@ public class BluetoothActivity extends AppCompatActivity {
         String message = edit.getText().toString();
         try {
             Log.e("s",device.toString());
+
             a.btSendData(device, message.getBytes()); // maybe a class for a device that's connected
         } catch (IOException e) {
             e.printStackTrace();
