@@ -169,7 +169,6 @@ public class BluetoothActivity extends AppCompatActivity {
         String message = edit.getText().toString();
         try {
             Log.e("s",device.toString());
-            device = a.getActiveDevice();
             a.btSendData(device, message.getBytes()); // maybe a class for a device that's connected
         } catch (IOException e) {
             e.printStackTrace();
